@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ puppy.name }} ({{ puppy.breed }})</h2>
+
+<h3>Owners:</h3>
+
+{% for owner in puppy.owners %}
+    <p>{{ owner.name }} - {{ owner.email }}</p>
+{% else %}
+    <p>No owners yet.</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Register Owner</h2>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name() }} <br><br>
+    {{ form.email.label }} {{ form.email() }} <br><br>
+    {{ form.puppy.label }} {{ form.puppy() }} <br><br>
+    {{ form.submit() }}
+</form>
+
+{% endblock %}

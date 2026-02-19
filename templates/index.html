@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>All Puppies</h2>
+
+{% for puppy in puppies %}
+    <p>
+        <a href="/puppy/{{ puppy.id }}">
+            {{ puppy.name }} ({{ puppy.breed }})
+        </a>
+    </p>
+{% endfor %}
+
+{% endblock %}
